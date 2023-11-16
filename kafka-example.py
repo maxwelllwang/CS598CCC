@@ -60,9 +60,7 @@ def main():
         pass
 
     tasks = [
-        Producer(),
-        Consumer()
-    ]
+        Producer()    ]
 
     # Start threads of a publisher/producer and a subscriber/consumer to 'my-topic' Kafka topic
     for t in tasks:
