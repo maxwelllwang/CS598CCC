@@ -15,9 +15,14 @@ def main():
 
     start = time.time()
     count = 0
+
+    iterations_per_second = 6000 # this number means nothing, just adjust it up or down until you get the rate you want
+    desired_interval = 1.0 / iterations_per_second
+
     for batch in parquet_file.iter_batches():
         
         for index, r in batch.to_pandas().iterrows():
+            loop_start_time = time.time()
 
 
             say = {
@@ -36,9 +41,16 @@ def main():
 
             count += 1
 
+            loop_end_time = time.time()
+            elapsed = loop_end_time - loop_start_time
+            sleep_time = max(desired_interval - elapsed, 0)
+            time.sleep(sleep_time)
+
             percent_complete = count / 2846722
             sys.stdout.write(f'\rProgress: {percent_complete:.2f}%, Rate: {int(count/(time.time()-start))} per second' )
             sys.stdout.flush()
+
+            
 
     end = time.time()
     print("total time passed:", end - start)
