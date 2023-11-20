@@ -24,4 +24,4 @@
   * `/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0 CS598CCC/pyspark-example.py`
 
 * Producer (NYC taxi data)
-  * `python3 prod.py` gets killed when mem runs out
+  * `python3 prod.py` 

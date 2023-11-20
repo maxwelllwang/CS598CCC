@@ -1,1 +1,4 @@
 kafka-python
+pandas
+pyarrow
+fastparquet

@@ -3,39 +3,30 @@ import time
 import signal
 import resource
 import pandas as pd
-from kafkaex import Producer
-
-
-def time_exceeded(signo, frame):
-    raise SystemExit(1)
-
-
-def set_max_runtime(seconds):
-    # setting up the resource limit
-    soft, hard = resource.getrlimit(resource.RLIMIT_CPU)
-    resource.setrlimit(resource.RLIMIT_CPU, (seconds, hard))
-    signal.signal(signal.SIGXCPU, time_exceeded)
-
+from custom_kafka_producer import CustomKafkaProducer
+import pyarrow.parquet as pq
 
 def main():
-    prod = Producer()
-    # df = pd.read_parquet("yellow_tripdata_2023-09.parquet")
-    df = pd.read_csv("yellow_tripdata_2023-09.csv", dtype="str")
-    res = df.to_json(orient="records")
-    start = time.time()
-    for r in json.loads(res):
-        say = {
-            'time_ns': time.time_ns(),
-            'tpep_pickup_datetime': r['tpep_pickup_datetime'],
-            'tpep_dropoff_datetime': r['tpep_dropoff_datetime'],
-            'passenger_count': r['passenger_count'],
-            'trip_distance': r['trip_distance'],
-            'fare_amount': r['fare_amount'],
-            'total_amount': r['total_amount']
-        }
-        jo = json.dumps(say)
+    nyc_taxi_topic = 'nyc-taxi'
+    prod = CustomKafkaProducer(topic_names=[nyc_taxi_topic])
+    parquet_file = pq.ParquetFile('yellow_tripdata_2023-09.parquet')
 
-        prod.run('nyc-taxi', jo)
+    start = time.time()
+    chunk_size = 10000  # Adjust this based on your system's memory
+    for batch in parquet_file.iter_batches():
+        for index, r in batch.to_pandas().iterrows():
+            say = {
+                'time_ns': int(time.time_ns()),
+                'tpep_pickup_datetime': str(r['tpep_pickup_datetime']),
+                'tpep_dropoff_datetime': str(r['tpep_dropoff_datetime']),
+                'passenger_count': int(r['passenger_count']),
+                'trip_distance': float(r['trip_distance']),
+                'fare_amount': float(r['fare_amount']),
+                'total_amount': float(r['total_amount'])
+            }
+            jo = json.dumps(say)
+
+            prod.write_topic(nyc_taxi_topic, jo)
 
     end = time.time()
     print("total time passed:", end - start)
