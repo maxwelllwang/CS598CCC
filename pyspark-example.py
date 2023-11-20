@@ -13,6 +13,16 @@ packages = [
     'org.apache.kafka:kafka-clients:3.2.1'
 ]
 
+
+print("main start")
+scala_version = '2.12'
+spark_version = '3.4.0'
+
+packages = [
+    f'org.apache.spark:spark-sql-kafka-0-10_{scala_version}:{spark_version}',
+    'org.apache.kafka:kafka-clients:3.2.1'
+]
+
 # Initialize Spark Session
 spark = SparkSession.builder \
     .appName("KafkaReadExample") \
@@ -22,6 +32,7 @@ spark = SparkSession.builder \
 # Define Kafka parameters
 kafka_topic_name = "my-topic"
 kafka_bootstrap_servers = "localhost:9092"  # e.g., "localhost:9092"
+
 nyc_taxi_topic_name = "nyc-taxi"
 
 
@@ -31,6 +42,7 @@ jsonSchema = StructType([
     StructField("sparkpi", BooleanType()),
     # Add more fields based on your JSON structure
 ])
+
 
 # Read from Kafka
 df = spark.readStream \

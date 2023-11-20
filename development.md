@@ -16,8 +16,13 @@
     * used this as an example to setup kafka
   * 
 
-
-* Pyspark
+* py-kafka producer
+  * to start kafka server
+    * navigate to the `CS598CCC/` repo or wherever your `docker-compose.yml` file is
+    * `docker compose up -d`
+    * this needs to be started for python kafka to find the kafka server
+    
+* Pyspark Consumer
   * `docker pull apache/spark-py`
   * `docker run -u root --rm -it --network=host -v /home/ubuntu/CS598CCC/:/opt/spark/work-dir/CS598CCC apache/spark-py /bin/bash`
 	* you have to run as root or you don't have permission to download the packages you need
