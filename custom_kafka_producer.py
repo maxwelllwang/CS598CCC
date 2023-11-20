@@ -8,6 +8,8 @@ class CustomKafkaProducer():
     def __init__(self, topic_names: []):
         admin = KafkaAdminClient(bootstrap_servers='localhost:9092')
         existing_topics = admin.list_topics()
+        # admin.delete_topics(existing_topics)
+            
         for topic in topic_names:
             if topic not in existing_topics:
                 topic = NewTopic(name=topic_names[0],

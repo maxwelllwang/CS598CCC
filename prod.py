@@ -24,18 +24,17 @@ def main():
         for index, r in batch.to_pandas().iterrows():
             loop_start_time = time.time()
 
-
             say = {
-                'time_ns': int(time.time_ns()),
-                'tpep_pickup_datetime': str(r['tpep_pickup_datetime']),
-                'tpep_dropoff_datetime': str(r['tpep_dropoff_datetime']),
+                'time_ns': float(time.time_ns()),
+                'tpep_pickup_datetime': float(r['tpep_pickup_datetime'].timestamp()),
+                'tpep_dropoff_datetime': float(r['tpep_dropoff_datetime'].timestamp()),
                 'passenger_count': int(r['passenger_count']),
                 'trip_distance': float(r['trip_distance']),
                 'fare_amount': float(r['fare_amount']),
-                'total_amount': float(r['total_amount'])
+                'total_amount': float(r['total_amount']),
+                'sparkpi': int(100000),
             }
             jo = json.dumps(say)
-
             prod.write_topic(nyc_taxi_topic, jo)
 
 

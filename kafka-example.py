@@ -36,7 +36,7 @@ class Consumer(threading.Thread):
         consumer = KafkaConsumer(bootstrap_servers='localhost:9092',
                                  auto_offset_reset='earliest',
                                  consumer_timeout_ms=1000)
-        consumer.subscribe(['my-topic'])
+        consumer.subscribe(['nyc-taxi'])
 
         while not self.stop_event.is_set():
             for message in consumer:
@@ -60,7 +60,7 @@ def main():
         pass
 
     tasks = [
-        Producer()    ]
+        Consumer()    ]
 
     # Start threads of a publisher/producer and a subscriber/consumer to 'my-topic' Kafka topic
     for t in tasks:
