@@ -5,6 +5,8 @@ import resource
 import pandas as pd
 from custom_kafka_producer import CustomKafkaProducer
 import pyarrow.parquet as pq
+import sys
+
 
 def main():
     nyc_taxi_topic = 'nyc-taxi'
@@ -12,9 +14,12 @@ def main():
     parquet_file = pq.ParquetFile('yellow_tripdata_2023-09.parquet')
 
     start = time.time()
-    chunk_size = 10000  # Adjust this based on your system's memory
+    count = 0
     for batch in parquet_file.iter_batches():
+        
         for index, r in batch.to_pandas().iterrows():
+
+
             say = {
                 'time_ns': int(time.time_ns()),
                 'tpep_pickup_datetime': str(r['tpep_pickup_datetime']),
@@ -27,6 +32,13 @@ def main():
             jo = json.dumps(say)
 
             prod.write_topic(nyc_taxi_topic, jo)
+
+
+            count += 1
+
+            percent_complete = count / 2846722
+            sys.stdout.write(f'\rProgress: {percent_complete:.2f}%, Rate: {int(count/(time.time()-start))} per second' )
+            sys.stdout.flush()
 
     end = time.time()
     print("total time passed:", end - start)
