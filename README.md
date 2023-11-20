@@ -13,4 +13,6 @@ CS598 Project to test autoscaling spark jobs consuming from kafka running on Ela
   * python venv
     * `python3 -m venv myvenv`
     * `source myvenv/bin/activate`
-    * `python3 -m pip instal -r requirements.txt`
+    * `python3 -m pip install -r requirements.txt`
+* `pyspark-example` needs to be run inside of the docker image
+* `prod.py` reads from `yellow_tripdata_2023-09.parquet` and uses custom-kafka-producer
