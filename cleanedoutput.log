@@ -1,0 +1,978 @@
+:: loading settings :: url = jar:file:/opt/spark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-76a105e0-6186-4ca2-85e3-728774ea0b89;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.0 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.0 in central
+	found org.apache.kafka#kafka-clients;3.3.2 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.9.1 in central
+	found org.slf4j#slf4j-api;2.0.6 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 1765ms :: artifacts dl 101ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.3.2 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.0 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.0 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.6 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.9.1 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-76a105e0-6186-4ca2-85e3-728774ea0b89
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/39ms)
+23/12/02 08:34:25 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/12/02 08:34:27 INFO SparkContext: Running Spark version 3.4.0
+23/12/02 08:34:27 INFO ResourceUtils: ==============================================================
+23/12/02 08:34:27 INFO ResourceUtils: No custom resources configured for spark.driver.
+23/12/02 08:34:27 INFO ResourceUtils: ==============================================================
+23/12/02 08:34:27 INFO SparkContext: Submitted application: KafkaReadExample
+23/12/02 08:34:27 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+23/12/02 08:34:27 INFO ResourceProfile: Limiting resource is cpu
+23/12/02 08:34:27 INFO ResourceProfileManager: Added ResourceProfile id: 0
+23/12/02 08:34:27 INFO SecurityManager: Changing view acls to: root
+23/12/02 08:34:27 INFO SecurityManager: Changing modify acls to: root
+23/12/02 08:34:27 INFO SecurityManager: Changing view acls groups to: 
+23/12/02 08:34:27 INFO SecurityManager: Changing modify acls groups to: 
+23/12/02 08:34:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root; groups with view permissions: EMPTY; users with modify permissions: root; groups with modify permissions: EMPTY
+23/12/02 08:34:28 INFO Utils: Successfully started service 'sparkDriver' on port 44705.
+23/12/02 08:34:28 INFO SparkEnv: Registering MapOutputTracker
+23/12/02 08:34:28 INFO SparkEnv: Registering BlockManagerMaster
+23/12/02 08:34:28 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/12/02 08:34:28 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/12/02 08:34:28 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+23/12/02 08:34:28 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-ac36c47f-e651-400c-8188-2cb018a0a916
+23/12/02 08:34:28 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+23/12/02 08:34:28 INFO SparkEnv: Registering OutputCommitCoordinator
+23/12/02 08:34:29 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+23/12/02 08:34:29 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added JAR file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://ip-172-31-41-192.ec2.internal:44705/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar at file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar at file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar at file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.kafka_kafka-clients-3.3.2.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/com.google.code.findbugs_jsr305-3.0.0.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.commons_commons-pool2-2.11.1.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.lz4_lz4-java-1.8.0.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar at file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.xerial.snappy_snappy-java-1.1.9.1.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar at file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.slf4j_slf4j-api-2.0.6.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+23/12/02 08:34:29 INFO SparkContext: Added file file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: Copying /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/commons-logging_commons-logging-1.1.3.jar
+23/12/02 08:34:29 INFO Executor: Starting executor ID driver on host ip-172-31-41-192.ec2.internal
+23/12/02 08:34:29 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/commons-logging_commons-logging-1.1.3.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.commons_commons-pool2-2.11.1.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.kafka_kafka-clients-3.3.2.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.kafka_kafka-clients-3.3.2.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.slf4j_slf4j-api-2.0.6.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.slf4j_slf4j-api-2.0.6.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.lz4_lz4-java-1.8.0.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/com.google.code.findbugs_jsr305-3.0.0.jar
+23/12/02 08:34:29 INFO Executor: Fetching file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar with timestamp 1701506067194
+23/12/02 08:34:29 INFO Utils: /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.xerial.snappy_snappy-java-1.1.9.1.jar
+23/12/02 08:34:29 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.slf4j_slf4j-api-2.0.6.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO TransportClientFactory: Successfully created connection to ip-172-31-41-192.ec2.internal/172.31.41.192:44705 after 114 ms (0 ms spent in bootstraps)
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.slf4j_slf4j-api-2.0.6.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp3430757957389459960.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp3430757957389459960.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.slf4j_slf4j-api-2.0.6.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.slf4j_slf4j-api-2.0.6.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp7177223307977768699.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp7177223307977768699.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.commons_commons-pool2-2.11.1.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.commons_commons-pool2-2.11.1.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp3042927769094083943.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp3042927769094083943.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.lz4_lz4-java-1.8.0.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.lz4_lz4-java-1.8.0.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp497229903082679933.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp497229903082679933.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp11019485559152447558.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp11019485559152447558.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.4.0.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp57266896885685331.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp57266896885685331.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/com.google.code.findbugs_jsr305-3.0.0.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/com.google.code.findbugs_jsr305-3.0.0.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.xerial.snappy_snappy-java-1.1.9.1.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp4934063713405177775.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp4934063713405177775.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.xerial.snappy_snappy-java-1.1.9.1.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.xerial.snappy_snappy-java-1.1.9.1.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.kafka_kafka-clients-3.3.2.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.kafka_kafka-clients-3.3.2.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp13476236776492822111.tmp
+23/12/02 08:34:30 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp13476236776492822111.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.kafka_kafka-clients-3.3.2.jar
+23/12/02 08:34:30 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.kafka_kafka-clients-3.3.2.jar to class loader
+23/12/02 08:34:30 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1701506067194
+23/12/02 08:34:30 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp15723724015950063800.tmp
+23/12/02 08:34:31 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp15723724015950063800.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+23/12/02 08:34:31 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader
+23/12/02 08:34:31 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1701506067194
+23/12/02 08:34:31 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp18412040533722682561.tmp
+23/12/02 08:34:31 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp18412040533722682561.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/commons-logging_commons-logging-1.1.3.jar
+23/12/02 08:34:31 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/commons-logging_commons-logging-1.1.3.jar to class loader
+23/12/02 08:34:31 INFO Executor: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar with timestamp 1701506067194
+23/12/02 08:34:31 INFO Utils: Fetching spark://ip-172-31-41-192.ec2.internal:44705/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp14915278985103354223.tmp
+23/12/02 08:34:31 INFO Utils: /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/fetchFileTemp14915278985103354223.tmp has been previously copied to /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar
+23/12/02 08:34:31 INFO Executor: Adding file:/tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/userFiles-92508aac-8e29-4626-8b8d-54b7215c58a8/org.apache.spark_spark-sql-kafka-0-10_2.12-3.4.0.jar to class loader
+23/12/02 08:34:31 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35959.
+23/12/02 08:34:31 INFO NettyBlockTransferService: Server created on ip-172-31-41-192.ec2.internal:35959
+23/12/02 08:34:31 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/12/02 08:34:31 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ip-172-31-41-192.ec2.internal, 35959, None)
+23/12/02 08:34:31 INFO BlockManagerMasterEndpoint: Registering block manager ip-172-31-41-192.ec2.internal:35959 with 434.4 MiB RAM, BlockManagerId(driver, ip-172-31-41-192.ec2.internal, 35959, None)
+23/12/02 08:34:31 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ip-172-31-41-192.ec2.internal, 35959, None)
+23/12/02 08:34:31 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ip-172-31-41-192.ec2.internal, 35959, None)
+23/12/02 08:34:32 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+23/12/02 08:34:32 INFO SharedState: Warehouse path is 'file:/opt/spark/work-dir/spark-warehouse'.
+23/12/02 08:34:44 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+23/12/02 08:34:44 WARN ResolveWriteToStream: Temporary checkpoint location created which is deleted normally when the query didn't fail: /tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4. If it's required to delete it under any circumstances, please set spark.sql.streaming.forceDeleteTempCheckpointLocation to true. Important to know deleting temp checkpoint folder is best effort.
+23/12/02 08:34:44 INFO ResolveWriteToStream: Checkpoint root /tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4 resolved to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4.
+23/12/02 08:34:44 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+23/12/02 08:34:45 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/metadata using temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/.metadata.e7c31aa0-ba5b-43e4-bc1f-0bf5454b8da7.tmp
+23/12/02 08:34:46 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/.metadata.e7c31aa0-ba5b-43e4-bc1f-0bf5454b8da7.tmp to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/metadata
+23/12/02 08:34:46 INFO MicroBatchExecution: Starting [id = 57bf5c15-e624-4c68-9bb2-798e5de73598, runId = 5ffb7777-6dde-46ba-b5b4-8db299fdf85e]. Use file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4 to store the query checkpoint.
+23/12/02 08:34:46 INFO MicroBatchExecution: Reading table [org.apache.spark.sql.kafka010.KafkaSourceProvider$KafkaTable@53f15cb0] from DataSourceV2 named 'kafka' [org.apache.spark.sql.kafka010.KafkaSourceProvider@61df39d5]
+23/12/02 08:34:47 INFO OffsetSeqLog: BatchIds found from listing: 
+23/12/02 08:34:47 INFO OffsetSeqLog: BatchIds found from listing: 
+23/12/02 08:34:47 INFO MicroBatchExecution: Starting new streaming query.
+23/12/02 08:34:47 INFO MicroBatchExecution: Stream started from {}
+23/12/02 08:34:52 INFO AdminClientConfig: AdminClientConfig values: 
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+23/12/02 08:34:53 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+23/12/02 08:34:53 INFO AppInfoParser: Kafka version: 3.3.2
+23/12/02 08:34:53 INFO AppInfoParser: Kafka commitId: b66af662e61082cb
+23/12/02 08:34:53 INFO AppInfoParser: Kafka startTimeMs: 1701506093054
+23/12/02 08:34:58 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/sources/0/0 using temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/sources/0/.0.dc64ae3c-af71-40ed-ac73-13e47b3de75f.tmp
+23/12/02 08:34:59 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/sources/0/.0.dc64ae3c-af71-40ed-ac73-13e47b3de75f.tmp to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/sources/0/0
+23/12/02 08:34:59 INFO KafkaMicroBatchStream: Initial offsets: {"nyc-taxi":{"0":3457156}}
+23/12/02 08:34:59 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/0 using temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/.0.aeb10ff2-e2a3-42b6-87c5-2baeee418dca.tmp
+23/12/02 08:35:00 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/.0.aeb10ff2-e2a3-42b6-87c5-2baeee418dca.tmp to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/0
+23/12/02 08:35:00 INFO MicroBatchExecution: Committed offsets for batch 0. Metadata OffsetSeqMetadata(0,1701506099522,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+23/12/02 08:35:05 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:05 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:06 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:07 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:08 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:08 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:08 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:08 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:09 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:09 INFO IncrementalExecution: Current batch timestamp = 1701506099522
+23/12/02 08:35:10 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:10 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:11 INFO CodeGenerator: Code generated in 777.571773 ms
+23/12/02 08:35:11 INFO CodeGenerator: Code generated in 107.048281 ms
+23/12/02 08:35:11 INFO CodeGenerator: Code generated in 115.432556 ms
+23/12/02 08:35:12 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+23/12/02 08:35:12 INFO SparkContext: Starting job: start at <unknown>:0
+23/12/02 08:35:12 INFO DAGScheduler: Got job 0 (start at <unknown>:0) with 1 output partitions
+23/12/02 08:35:12 INFO DAGScheduler: Final stage: ResultStage 0 (start at <unknown>:0)
+23/12/02 08:35:12 INFO DAGScheduler: Parents of final stage: List()
+23/12/02 08:35:12 INFO DAGScheduler: Missing parents: List()
+23/12/02 08:35:12 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[9] at start at <unknown>:0), which has no missing parents
+23/12/02 08:35:12 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 46.5 KiB, free 434.4 MiB)
+23/12/02 08:35:12 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 18.3 KiB, free 434.3 MiB)
+23/12/02 08:35:12 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on ip-172-31-41-192.ec2.internal:35959 (size: 18.3 KiB, free: 434.4 MiB)
+23/12/02 08:35:12 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1535
+23/12/02 08:35:12 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[9] at start at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+23/12/02 08:35:12 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+23/12/02 08:35:13 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (ip-172-31-41-192.ec2.internal, executor driver, partition 0, PROCESS_LOCAL, 8303 bytes) 
+23/12/02 08:35:13 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+23/12/02 08:35:13 INFO CodeGenerator: Code generated in 286.207788 ms
+23/12/02 08:35:14 INFO CodeGenerator: Code generated in 69.81545 ms
+23/12/02 08:35:15 INFO CodeGenerator: Code generated in 107.374946 ms
+23/12/02 08:35:15 INFO CodeGenerator: Code generated in 58.168818 ms
+23/12/02 08:35:15 INFO CodeGenerator: Code generated in 83.662557 ms
+23/12/02 08:35:15 INFO CodeGenerator: Code generated in 137.900083 ms
+23/12/02 08:35:15 INFO CodeGenerator: Code generated in 165.020817 ms
+23/12/02 08:35:15 INFO ConsumerConfig: ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = none
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+23/12/02 08:35:15 INFO AppInfoParser: Kafka version: 3.3.2
+23/12/02 08:35:15 INFO AppInfoParser: Kafka commitId: b66af662e61082cb
+23/12/02 08:35:15 INFO AppInfoParser: Kafka startTimeMs: 1701506115972
+23/12/02 08:35:15 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Assigned to partition(s): nyc-taxi-0
+23/12/02 08:35:16 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3457156 for partition nyc-taxi-0
+23/12/02 08:35:16 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting the last seen epoch of partition nyc-taxi-0 to 0 since the associated topicId changed from null to _f7Wrtr6SA-VxiGIwZYQWw
+23/12/02 08:35:16 INFO Metadata: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Cluster ID: vKrvRBIVS_af_FpbmFzxUg
+23/12/02 08:35:16 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:16 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:16 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:16 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3466066, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:28 INFO PythonUDFRunner: Times: total = 14074, boot = 1005, init = 1879, finish = 11190
+23/12/02 08:35:28 INFO PythonUDFRunner: Times: total = 12891, boot = 27, init = 12864, finish = 0
+23/12/02 08:35:28 INFO DataWritingSparkTask: Commit authorized for partition 0 (task 0, attempt 0, stage 0.0)
+23/12/02 08:35:28 INFO DataWritingSparkTask: Committed partition 0 (task 0, attempt 0, stage 0.0)
+23/12/02 08:35:28 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 16659 bytes result sent to driver
+23/12/02 08:35:28 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 15319 ms on ip-172-31-41-192.ec2.internal (executor driver) (1/1)
+23/12/02 08:35:28 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/12/02 08:35:28 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 57067
+23/12/02 08:35:28 INFO DAGScheduler: ResultStage 0 (start at <unknown>:0) finished in 15.825 s
+23/12/02 08:35:28 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+23/12/02 08:35:28 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+23/12/02 08:35:28 INFO DAGScheduler: Job 0 finished: start at <unknown>:0, took 15.949602 s
+23/12/02 08:35:28 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] is committing.
+-------------------------------------------
+Batch: 0
+-------------------------------------------
+23/12/02 08:35:29 INFO CodeGenerator: Code generated in 74.901075 ms
+23/12/02 08:35:29 INFO CodeGenerator: Code generated in 103.82986 ms
++--------------------+--------------------+---------------------+---------------+-------------+-----------+------------+-------+--------------------+--------------------+-----------+----------+-------------+
+|             time_ns|tpep_pickup_datetime|tpep_dropoff_datetime|passenger_count|trip_distance|fare_amount|total_amount|sparkpi|           timestamp|   current_timestamp|pi_estimate|latency_ms|average_speed|
++--------------------+--------------------+---------------------+---------------+-------------+-----------+------------+-------+--------------------+--------------------+-----------+----------+-------------+
+|1.701506098416212...|        1.69367091E9|         1.69367168E9|              1|         1.57|       12.1|        17.1| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14956|    1106.0|   0.73593754|
+|1.701506098434656...|        1.69367066E9|         1.69367296E9|              2|        18.08|       70.9|       81.09| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1406|    1088.0|        2.825|
+|1.701506098435153...|        1.69367194E9|          1.6936727E9|              1|          0.8|       12.1|        16.1| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1482|    1087.0|        0.375|
+|1.701506098435835...|        1.69367296E9|         1.69367488E9|              1|          5.1|       31.0|        42.0| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.15032|    1087.0|   0.95624995|
+|1.701506098436241...|         1.6936727E9|         1.69367462E9|              1|         11.2|       45.7|       58.75| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14444|    1086.0|          2.1|
+|1.701506098436660...|        1.69367296E9|         1.69367347E9|              1|         0.89|        9.3|       15.96| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1478|    1052.0|   0.62578124|
+|1.701506098472178...|        1.69367296E9|         1.69367642E9|              1|         19.3|       70.0|       92.69| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.13216|    1050.0|    2.0104165|
+|1.701506098490253...|         1.6936727E9|          1.6936727E9|              1|          0.0|        5.1|         9.1| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1354|    1032.0|         null|
+|1.701506098490695...|        1.69367309E9|         1.69367309E9|              1|          0.0|        3.7|         7.7| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14824|    1032.0|         null|
+|1.701506098491423...|        1.69367334E9|          1.6936791E9|              1|         23.1|       70.0|        74.0| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.13572|    1031.0|      1.44375|
+|1.701506098492332...|         1.6936713E9|         1.69367181E9|              1|         0.72|        9.3|       15.96| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14528|    1030.0|      0.50625|
+|1.701506098492626...|        1.69367104E9|         1.69367232E9|              2|          5.2|       23.3|       31.55| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1412|    1030.0|       1.4625|
+|1.701506098511089...|        1.69367155E9|         1.69367334E9|              1|         5.08|       30.3|        34.3| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14044|    1011.0|    1.0205357|
+|1.701506098511714...|        1.69367206E9|         1.69367206E9|              1|          0.0|        3.7|         7.7| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1474|    1011.0|         null|
+|1.701506098512138...|        1.69367334E9|          1.6936736E9|              1|         0.29|        5.8|       12.74| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1416|    1010.0|   0.40781248|
+|1.701506098512633...|        1.69367104E9|         1.69367168E9|              1|         1.94|       12.8|        18.8| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14016|    1010.0|    1.0912501|
+|1.701506098571723...|        1.69367194E9|         1.69367206E9|              1|         0.69|        5.8|       11.76| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.14572|     951.0|     1.940625|
+|1.701506098572858...|        1.69367219E9|         1.69367334E9|              1|          3.6|       19.8|        23.8| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1394|     950.0|        1.125|
+|1.701506098592537...|        1.69367181E9|         1.69367206E9|              2|          0.5|        5.1|       11.35| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|     3.1394|     930.0|     0.703125|
+|1.701506098592950...|        1.69367347E9|         1.69367398E9|              1|          1.7|       11.4|       15.45| 100000|2023-12-02 08:34:...|2023-12-02 08:34:...|    3.13512|     929.0|    1.1953125|
++--------------------+--------------------+---------------------+---------------+-------------+-----------+------------+-------+--------------------+--------------------+-----------+----------+-------------+
+only showing top 20 rows
+
+23/12/02 08:35:29 INFO WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 0, writer: ConsoleWriter[numRows=20, truncate=true]] committed.
+23/12/02 08:35:29 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/commits/0 using temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/commits/.0.605227ae-41dd-4d96-9818-52fbe88cc8cc.tmp
+23/12/02 08:35:29 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/commits/.0.605227ae-41dd-4d96-9818-52fbe88cc8cc.tmp to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/commits/0
+23/12/02 08:35:29 INFO MicroBatchExecution: Streaming query made progress: {
+  "id" : "57bf5c15-e624-4c68-9bb2-798e5de73598",
+  "runId" : "5ffb7777-6dde-46ba-b5b4-8db299fdf85e",
+  "name" : null,
+  "timestamp" : "2023-12-02T08:34:47.224Z",
+  "batchId" : 0,
+  "numInputRows" : 105,
+  "inputRowsPerSecond" : 0.0,
+  "processedRowsPerSecond" : 2.4882106211047654,
+  "durationMs" : {
+    "addBatch" : 21669,
+    "commitOffsets" : 103,
+    "getBatch" : 204,
+    "latestOffset" : 12181,
+    "queryPlanning" : 7010,
+    "triggerExecution" : 42197,
+    "walCommit" : 712
+  },
+  "stateOperators" : [ ],
+  "sources" : [ {
+    "description" : "KafkaV2[Subscribe[nyc-taxi]]",
+    "startOffset" : null,
+    "endOffset" : {
+      "nyc-taxi" : {
+        "0" : 3457261
+      }
+    },
+    "latestOffset" : {
+      "nyc-taxi" : {
+        "0" : 3457261
+      }
+    },
+    "numInputRows" : 105,
+    "inputRowsPerSecond" : 0.0,
+    "processedRowsPerSecond" : 2.4882106211047654,
+    "metrics" : {
+      "avgOffsetsBehindLatest" : "0.0",
+      "maxOffsetsBehindLatest" : "0",
+      "minOffsetsBehindLatest" : "0"
+    }
+  } ],
+  "sink" : {
+    "description" : "org.apache.spark.sql.execution.streaming.ConsoleTable$@ec49741",
+    "numOutputRows" : 105
+  }
+}
+23/12/02 08:35:29 INFO CheckpointFileManager: Writing atomically to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/1 using temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/.1.884635dd-3105-4b02-95fb-71dfd663ebed.tmp
+23/12/02 08:35:29 INFO CheckpointFileManager: Renamed temp file file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/.1.884635dd-3105-4b02-95fb-71dfd663ebed.tmp to file:/tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4/offsets/1
+23/12/02 08:35:29 INFO MicroBatchExecution: Committed offsets for batch 1. Metadata OffsetSeqMetadata(0,1701506129530,Map(spark.sql.streaming.stateStore.providerClass -> org.apache.spark.sql.execution.streaming.state.HDFSBackedStateStoreProvider, spark.sql.streaming.join.stateFormatVersion -> 2, spark.sql.streaming.stateStore.compression.codec -> lz4, spark.sql.streaming.stateStore.rocksdb.formatVersion -> 5, spark.sql.streaming.statefulOperator.useStrictDistribution -> true, spark.sql.streaming.flatMapGroupsWithState.stateFormatVersion -> 2, spark.sql.streaming.multipleWatermarkPolicy -> min, spark.sql.streaming.aggregation.stateFormatVersion -> 2, spark.sql.shuffle.partitions -> 200))
+23/12/02 08:35:29 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:29 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:29 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:29 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:29 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:29 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:29 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:29 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:30 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:30 INFO IncrementalExecution: Current batch timestamp = 1701506129530
+23/12/02 08:35:30 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:30 INFO KafkaOffsetReaderAdmin: Partitions added: Map()
+23/12/02 08:35:30 INFO CodeGenerator: Code generated in 47.3046 ms
+23/12/02 08:35:30 INFO WriteToDataSourceV2Exec: Start processing data source write support: MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]]. The input RDD has 1 partitions.
+23/12/02 08:35:30 INFO SparkContext: Starting job: start at <unknown>:0
+23/12/02 08:35:30 INFO DAGScheduler: Got job 1 (start at <unknown>:0) with 1 output partitions
+23/12/02 08:35:30 INFO DAGScheduler: Final stage: ResultStage 1 (start at <unknown>:0)
+23/12/02 08:35:30 INFO DAGScheduler: Parents of final stage: List()
+23/12/02 08:35:30 INFO DAGScheduler: Missing parents: List()
+23/12/02 08:35:30 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[19] at start at <unknown>:0), which has no missing parents
+23/12/02 08:35:30 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 46.5 KiB, free 434.3 MiB)
+23/12/02 08:35:30 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 18.3 KiB, free 434.3 MiB)
+23/12/02 08:35:30 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on ip-172-31-41-192.ec2.internal:35959 (size: 18.3 KiB, free: 434.4 MiB)
+23/12/02 08:35:30 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+23/12/02 08:35:30 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[19] at start at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+23/12/02 08:35:30 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+23/12/02 08:35:30 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (ip-172-31-41-192.ec2.internal, executor driver, partition 0, PROCESS_LOCAL, 8303 bytes) 
+23/12/02 08:35:30 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+23/12/02 08:35:30 INFO CodeGenerator: Code generated in 40.77436 ms
+23/12/02 08:35:30 INFO BlockManagerInfo: Removed broadcast_0_piece0 on ip-172-31-41-192.ec2.internal:35959 in memory (size: 18.3 KiB, free: 434.4 MiB)
+23/12/02 08:35:31 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3457656 for partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3482573, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:31 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3458156 for partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3482855, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:31 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3458656 for partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:31 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3483029, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3459156 for partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3483290, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3459656 for partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3483621, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3460156 for partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:32 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3484047, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3460656 for partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3484279, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3461156 for partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3484484, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3461307 for partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3484589, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3461807 for partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3484847, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:33 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3462307 for partition nyc-taxi-0
+23/12/02 08:35:33 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485047, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3462807 for partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485200, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3463307 for partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485348, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3463807 for partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485564, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3464307 for partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485758, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3464807 for partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:34 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3485964, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3465307 for partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3486161, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3465415 for partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3486214, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3465915 for partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3486597, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3466415 for partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:35 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3486812, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3466915 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3486958, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3467415 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487089, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3467915 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487233, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3468415 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487370, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3468915 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487526, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3469415 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487685, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3469534 for partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:36 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487727, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3470034 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3487921, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3470534 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488019, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3471034 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488087, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3471534 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488217, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3472034 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488354, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3472534 for partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:37 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488391, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3473034 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488483, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3473534 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488620, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3473608 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488657, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3474108 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488754, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3474608 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488847, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3475108 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3488962, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3475608 for partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:38 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489126, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3476108 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489198, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3476608 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489338, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3477108 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489461, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3477608 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489503, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3477681 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489519, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3478181 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489599, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3478681 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489695, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3479181 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489741, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3479681 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489777, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3480181 for partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:39 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489826, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:40 INFO KafkaConsumer: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to offset 3480681 for partition nyc-taxi-0
+23/12/02 08:35:40 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to earliest offset of partition nyc-taxi-0
+23/12/02 08:35:40 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=103743, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+23/12/02 08:35:40 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Seeking to latest offset of partition nyc-taxi-0
+23/12/02 08:35:40 INFO SubscriptionState: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting offset for partition nyc-taxi-0 to position FetchPosition{offset=3489902, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+RuntimeError: reentrant call inside <_io.BufferedReader name=3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+ERROR:root:Exception while sending command.
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 511, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 377, in signal_handler
+    self.cancelAllJobs()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/context.py", line 2255, in cancelAllJobs
+    self._jsc.sc().cancelAllJobs()
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 169, in deco
+    return f(*a, **kw)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+    raise Py4JError(
+py4j.protocol.Py4JError: An error occurred while calling o17.sc
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 539, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+Traceback (most recent call last):
+  File "/opt/spark/work-dir/CS598CCC/pyspark-example.py", line 101, in <module>
+    query.awaitTermination()
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/sql/streaming/query.py", line 201, in awaitTermination
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/opt/spark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 169, in deco
+  File "/opt/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 334, in get_return_value
+py4j.protocol.Py4JError: An error occurred while calling o110.awaitTermination
+23/12/02 08:36:55 INFO SparkContext: Invoking stop() from shutdown hook
+23/12/02 08:36:55 INFO SparkContext: SparkContext is stopping with exitCode 0.
+23/12/02 08:36:55 INFO SparkUI: Stopped Spark web UI at http://ip-172-31-41-192.ec2.internal:4040
+23/12/02 08:36:55 INFO DAGScheduler: ResultStage 1 (start at <unknown>:0) failed in 85.473 s due to Stage cancelled because SparkContext was shut down
+23/12/02 08:36:55 INFO DAGScheduler: Job 1 failed: start at <unknown>:0, took 85.486899 s
+23/12/02 08:36:55 ERROR WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] is aborting.
+23/12/02 08:36:55 ERROR WriteToDataSourceV2Exec: Data source write support MicroBatchWrite[epoch: 1, writer: ConsoleWriter[numRows=20, truncate=true]] aborted.
+23/12/02 08:36:56 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+23/12/02 08:36:56 ERROR MicroBatchExecution: Query [id = 57bf5c15-e624-4c68-9bb2-798e5de73598, runId = 5ffb7777-6dde-46ba-b5b4-8db299fdf85e] terminated with error
+org.apache.spark.SparkException: Job 1 cancelled because SparkContext was shut down
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1(DAGScheduler.scala:1212)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$cleanUpAfterSchedulerStop$1$adapted(DAGScheduler.scala:1210)
+	at scala.collection.mutable.HashSet.foreach(HashSet.scala:79)
+	at org.apache.spark.scheduler.DAGScheduler.cleanUpAfterSchedulerStop(DAGScheduler.scala:1210)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onStop(DAGScheduler.scala:3011)
+	at org.apache.spark.util.EventLoop.stop(EventLoop.scala:84)
+	at org.apache.spark.scheduler.DAGScheduler.$anonfun$stop$3(DAGScheduler.scala:2902)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1509)
+	at org.apache.spark.scheduler.DAGScheduler.stop(DAGScheduler.scala:2902)
+	at org.apache.spark.SparkContext.$anonfun$stop$12(SparkContext.scala:2128)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1509)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2128)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:2081)
+	at org.apache.spark.SparkContext.$anonfun$new$31(SparkContext.scala:664)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:214)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$2(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:2088)
+	at org.apache.spark.util.SparkShutdownHookManager.$anonfun$runAll$1(ShutdownHookManager.scala:188)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:188)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:178)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:971)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2263)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2(WriteToDataSourceV2Exec.scala:408)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.writeWithV2$(WriteToDataSourceV2Exec.scala:382)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.writeWithV2(WriteToDataSourceV2Exec.scala:330)
+	at org.apache.spark.sql.execution.datasources.v2.WriteToDataSourceV2Exec.run(WriteToDataSourceV2Exec.scala:341)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result$lzycompute(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.result(V2CommandExec.scala:43)
+	at org.apache.spark.sql.execution.datasources.v2.V2CommandExec.executeCollect(V2CommandExec.scala:49)
+	at org.apache.spark.sql.Dataset.collectFromPlan(Dataset.scala:4177)
+	at org.apache.spark.sql.Dataset.$anonfun$collect$1(Dataset.scala:3418)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$2(Dataset.scala:4167)
+	at org.apache.spark.sql.execution.QueryExecution$.withInternalError(QueryExecution.scala:526)
+	at org.apache.spark.sql.Dataset.$anonfun$withAction$1(Dataset.scala:4165)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.Dataset.withAction(Dataset.scala:4165)
+	at org.apache.spark.sql.Dataset.collect(Dataset.scala:3418)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$17(MicroBatchExecution.scala:738)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:118)
+	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:195)
+	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:103)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:65)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runBatch$16(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runBatch(MicroBatchExecution.scala:726)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$2(MicroBatchExecution.scala:284)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken(ProgressReporter.scala:411)
+	at org.apache.spark.sql.execution.streaming.ProgressReporter.reportTimeTaken$(ProgressReporter.scala:409)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.reportTimeTaken(StreamExecution.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.$anonfun$runActivatedStream$1(MicroBatchExecution.scala:247)
+	at org.apache.spark.sql.execution.streaming.ProcessingTimeExecutor.execute(TriggerExecutor.scala:67)
+	at org.apache.spark.sql.execution.streaming.MicroBatchExecution.runActivatedStream(MicroBatchExecution.scala:237)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.$anonfun$runStream$1(StreamExecution.scala:306)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:827)
+	at org.apache.spark.sql.execution.streaming.StreamExecution.org$apache$spark$sql$execution$streaming$StreamExecution$$runStream(StreamExecution.scala:284)
+	at org.apache.spark.sql.execution.streaming.StreamExecution$$anon$1.run(StreamExecution.scala:207)
+23/12/02 08:36:56 ERROR Utils: Aborting task
+org.apache.spark.SparkException: Python worker exited unexpectedly (crashed)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator$$anonfun$1.applyOrElse(PythonRunner.scala:601)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator$$anonfun$1.applyOrElse(PythonRunner.scala:583)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:99)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:75)
+	at org.apache.spark.api.python.BasePythonRunner$ReaderIterator.hasNext(PythonRunner.scala:514)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage3.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:760)
+	at org.apache.spark.sql.execution.datasources.v2.WritingSparkTask.$anonfun$run$1(WriteToDataSourceV2Exec.scala:464)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1563)
+	at org.apache.spark.sql.execution.datasources.v2.WritingSparkTask.run(WriteToDataSourceV2Exec.scala:509)
+	at org.apache.spark.sql.execution.datasources.v2.WritingSparkTask.run$(WriteToDataSourceV2Exec.scala:448)
+	at org.apache.spark.sql.execution.datasources.v2.DataWritingSparkTask$.run(WriteToDataSourceV2Exec.scala:514)
+	at org.apache.spark.sql.execution.datasources.v2.V2TableWriteExec.$anonfun$writeWithV2$2(WriteToDataSourceV2Exec.scala:411)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:92)
+	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:161)
+	at org.apache.spark.scheduler.Task.run(Task.scala:139)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:554)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1529)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:557)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(Unknown Source)
+	at org.apache.spark.sql.execution.python.PythonUDFRunner$$anon$2.read(PythonUDFRunner.scala:83)
+	... 24 more
+23/12/02 08:36:56 INFO AppInfoParser: App info kafka.admin.client for adminclient-1 unregistered
+23/12/02 08:36:56 ERROR DataWritingSparkTask: Aborting commit for partition 0 (task 1, attempt 0, stage 1.0)
+23/12/02 08:36:56 ERROR DataWritingSparkTask: Aborted commit for partition 0 (task 1, attempt 0, stage 1.0)
+23/12/02 08:36:56 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Resetting generation and member id due to: consumer pro-actively leaving the group
+23/12/02 08:36:56 INFO ConsumerCoordinator: [Consumer clientId=consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1, groupId=spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor] Request joining group due to: consumer pro-actively leaving the group
+23/12/02 08:36:56 INFO Metrics: Metrics scheduler closed
+23/12/02 08:36:56 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+23/12/02 08:36:56 INFO Metrics: Metrics reporters closed
+23/12/02 08:36:56 INFO Metrics: Metrics scheduler closed
+23/12/02 08:36:56 INFO Metrics: Closing reporter org.apache.kafka.common.metrics.JmxReporter
+23/12/02 08:36:56 INFO Metrics: Metrics reporters closed
+23/12/02 08:36:56 INFO AppInfoParser: App info kafka.consumer for consumer-spark-kafka-source-6c6bd421-5ad6-4439-83ad-d275c8440017-1107832610-executor-1 unregistered
+23/12/02 08:36:56 INFO MicroBatchExecution: Async log purge executor pool for query [id = 57bf5c15-e624-4c68-9bb2-798e5de73598, runId = 5ffb7777-6dde-46ba-b5b4-8db299fdf85e] has been shutdown
+23/12/02 08:36:57 ERROR Executor: Exception in task 0.0 in stage 1.0 (TID 1): Python worker exited unexpectedly (crashed)
+23/12/02 08:36:57 INFO MemoryStore: MemoryStore cleared
+23/12/02 08:36:57 INFO BlockManager: BlockManager stopped
+23/12/02 08:36:57 INFO BlockManagerMaster: BlockManagerMaster stopped
+23/12/02 08:36:57 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+23/12/02 08:36:57 INFO SparkContext: Successfully stopped SparkContext
+23/12/02 08:36:57 INFO ShutdownHookManager: Shutdown hook called
+23/12/02 08:36:57 INFO ShutdownHookManager: Deleting directory /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537
+23/12/02 08:36:57 INFO ShutdownHookManager: Deleting directory /tmp/spark-9e6147b5-d7be-4fe2-93fe-7f06cbdf1537/pyspark-62ae9deb-d84e-444c-8509-db4800c3d73d
+23/12/02 08:36:57 INFO ShutdownHookManager: Deleting directory /tmp/spark-e54a430f-0e67-4804-9d1b-5f530d8c14dc
+23/12/02 08:36:57 INFO ShutdownHookManager: Deleting directory /tmp/temporary-6a863747-407c-4277-bc60-1745b0d32ca4

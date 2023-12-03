@@ -4,7 +4,13 @@ from pyspark.sql.types import StringType, IntegerType, BooleanType,FloatType, St
 import time 
 import random
 from datetime import datetime
+import sys
 
+
+
+kafka_broker_address=sys.argv[1]
+if not kafka_broker_address:
+    kafka_broker_address = "localhost:9092"
 
 
 scala_version = '2.12'
@@ -25,7 +31,7 @@ spark = SparkSession.builder \
 
 # Define Kafka parameters
 kafka_topic_name = "my-topic"
-kafka_bootstrap_servers = "localhost:9092"  # e.g., "localhost:9092"
+kafka_bootstrap_servers = kafka_broker_address  # e.g., "localhost:9092"
 
 nyc_taxi_topic_name = "nyc-taxi"
 

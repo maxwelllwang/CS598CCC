@@ -27,6 +27,16 @@
   * `docker run -u root --rm -it --network=host -v /home/ubuntu/CS598CCC/:/opt/spark/work-dir/CS598CCC apache/spark-py /bin/bash`
 	* you have to run as root or you don't have permission to download the packages you need
   * `/opt/spark/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0 CS598CCC/pyspark-example.py`
+  * 
 
 * Producer (NYC taxi data)
   * `python3 prod.py` 
+
+* Provisioning eks cluster
+  * https://medium.com/nerd-for-tech/pyspark-spark-operator-amazon-eks-big-data-on-steroids-7d1ccedb765b
+  * installing kubctl eksctl helm awscli
+  * should be in /usr/local/bin for `ubuntu` user
+  * setting up aws credentials using `aws configure`
+  * ran `eksctl create cluster -f eks-cluster.yaml`
+  * installed `k9s` please use it, its glorious
+  * `aws s3 cp pyspark-example.py s3://cs598sparkjobs/` this is how sparkjobs accesses our files
