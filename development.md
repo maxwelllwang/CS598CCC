@@ -40,3 +40,10 @@
   * ran `eksctl create cluster -f eks-cluster.yaml`
   * installed `k9s` please use it, its glorious
   * `aws s3 cp pyspark-example.py s3://cs598sparkjobs/` this is how sparkjobs accesses our files
+
+* Prometheus monitoring
+  * `cd prometheus-2.48.0.linux-amd64/`
+  * `./prometheus --config.file=prometheus.yml`
+  * open `[ec2IP]:9090` in a browser for the ui
+    * check `[ec2IP]:9090/metrics`
+    * query from `[ec2IP]:9090/graphs`
