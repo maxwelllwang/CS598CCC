@@ -37,9 +37,9 @@ managedNodeGroups:
   - name: cs598-taxi-node
     instanceTypes: ["t2.medium"]
     spot: true
-    minSize: 1
+    minSize: 0
     maxSize: 10
-    desiredCapacity: 1
+    desiredCapacity: 0
     volumeSize: 50
     availabilityZones: ["us-east-1a", "us-east-1b"]
     labels:
