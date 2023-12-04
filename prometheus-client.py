@@ -6,6 +6,7 @@ import time
 metric = Gauge('my_metric', 'Description of gauge')
 
 # Function to generate random data for the metric
+# TODO get metrics from pyspark
 def generate_random_data():
     return random.uniform(0, 100)
 
